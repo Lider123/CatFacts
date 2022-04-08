@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/facts">
+
+    <fragment
+        android:id="@+id/facts"
+        android:label="Facts"
+        android:name="ru.babaets.catfacts.presentation.facts.FactsFragment"
+        tools:layout="@layout/fragment_facts">
+
+        <action
+            android:id="@+id/toHistory"
+            app:destination="@id/history"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/history"
+        android:label="History"
+        android:name="ru.babaets.catfacts.presentation.history.HistoryFragment"
+        tools:layout="@layout/fragment_history"/>
+</navigation>

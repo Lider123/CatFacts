@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CatFacts</string>
+
+    <string name="retry">Retry</string>
+
+    <string name="get_fact_error">Failed to load fact. Please try again later.</string>
+    <string name="empty_history_error">The fact history is empty.</string>
+
+    <string name="facts_new_fact">Another fact!</string>
+</resources>
