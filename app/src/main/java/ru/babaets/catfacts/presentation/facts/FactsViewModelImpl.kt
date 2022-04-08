@@ -24,12 +24,16 @@ class FactsViewModelImpl(
         loadData()
     }
 
+    override fun onHistoryPressed() {
+        navigator.forward(FactsFragmentDirections.toHistory())
+    }
+
     override fun onRetryPressed() {
         loadData()
     }
 
     private fun loadData() {
-        launchWithLoading(Dispatchers.IO) {
+        launchWithLoading {
             factLiveData.postValue(getNewFactUseCase.execute())
             pictureLiveData.postValue(BuildConfig.IMAGE_URL)
         }

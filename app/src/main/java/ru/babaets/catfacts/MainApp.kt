@@ -7,6 +7,7 @@ import ru.babaets.catfacts.common.appModule
 import ru.babaets.catfacts.data.db.dbModule
 import ru.babaets.catfacts.data.network.networkModule
 import ru.babaets.catfacts.presentation.facts.factsModule
+import ru.babaets.catfacts.presentation.history.historyModule
 
 class MainApp : Application() {
 
@@ -23,7 +24,7 @@ class MainApp : Application() {
                 networkModule,
                 dbModule,
                 factsModule,
-                //historyModule
+                historyModule
             )
         }
     }

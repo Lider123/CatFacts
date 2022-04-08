@@ -12,5 +12,7 @@ interface FactsViewModel : IViewModel {
 
     fun onNewFactPressed()
 
+    fun onHistoryPressed()
+
     fun onRetryPressed()
 }

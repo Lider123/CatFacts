@@ -15,6 +15,7 @@ val factsModule = module {
     factory<GetNewFactUseCase> {
         GetNewFactInteractor(
             api = get(),
+            db = get(),
             stringProvider = get()
         )
     }

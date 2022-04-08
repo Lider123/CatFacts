@@ -5,6 +5,10 @@
 
     <string name="get_fact_error">Failed to load fact. Please try again later.</string>
     <string name="empty_history_error">The fact history is empty.</string>
+    <string name="get_facts_history_error">Failed to load facts history. Please try again later.</string>
 
     <string name="facts_new_fact">Another fact!</string>
+    <string name="facts_history">History</string>
+
+    <string name="history_title">History</string>
 </resources>

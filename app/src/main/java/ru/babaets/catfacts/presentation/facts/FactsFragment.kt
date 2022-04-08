@@ -26,8 +26,13 @@ class FactsFragment : BaseFragment<FactsViewModel>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnNewFact.setOnClickListener {
-            viewModel.onNewFactPressed()
+        binding.run {
+            btnNewFact.setOnClickListener {
+                viewModel.onNewFactPressed()
+            }
+            btnHistory.setOnClickListener {
+                viewModel.onHistoryPressed()
+            }
         }
 
         viewModel.factLiveData.observe(viewLifecycleOwner, ::populateFact)
@@ -67,7 +72,9 @@ class FactsFragment : BaseFragment<FactsViewModel>() {
     }
 
     private fun populateFact(fact: Fact) {
-        binding.tvFact.text = fact.text
-        binding.tvUpdatedAt.text = fact.updatedAtString.formatApiDateTime(requireContext())
+        binding.run {
+            tvFact.text = fact.text
+            tvUpdatedAt.text = fact.updatedAt.formatApiDateTime(requireContext())
+        }
     }
 }
